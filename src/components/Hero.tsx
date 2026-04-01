@@ -135,7 +135,7 @@ export default function Hero() {
               <span className="gradient-text">Saleel C</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/40 font-light tracking-wide italic">
-              "Code. Improve. Repeat."
+              {"\"Code. Improve. Repeat.\""}
             </p>
           </motion.div>
 
@@ -158,7 +158,7 @@ export default function Hero() {
             className="absolute inset-x-8 md:inset-x-24 flex flex-col items-center justify-center text-center"
           >
             <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white mb-10">
-              Let's create something <span className="gradient-text">impactful.</span>
+              Let{"'"}s create something <span className="gradient-text">impactful.</span>
             </h2>
             
             <div className="flex flex-wrap items-center justify-center gap-6 pointer-events-auto">

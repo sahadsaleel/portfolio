@@ -17,6 +17,15 @@ interface Project {
   status: string;
 }
 
+interface GitHubRepo {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  language: string | null;
+  fork: boolean;
+}
+
 const manualProjects: Project[] = [
   {
     title: "E-Commerce Website",
@@ -68,8 +77,8 @@ export default function Projects() {
         const manualTitles = manualProjects.map(p => p.title.toLowerCase());
         
         const fetchedProjects: Project[] = data
-          .filter((repo: any) => !manualTitles.includes(repo.name.toLowerCase()) && !repo.fork)
-          .map((repo: any) => ({
+          .filter((repo: GitHubRepo) => !manualTitles.includes(repo.name.toLowerCase()) && !repo.fork)
+          .map((repo: GitHubRepo) => ({
             title: repo.name.replace(/-/g, " "),
             desc: repo.description || "No description provided.",
             tags: repo.language ? [repo.language] : ["Web"],
